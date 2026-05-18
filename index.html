@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Clone — Home</title>
+    <!-- Typography: modern sans + cinematic display for branding -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--
+      Images: this demo uses The Movie Database (TMDB) CDN URLs so posters load online.
+      For fully local assets, place files under images/ and swap src / background URLs, e.g.:
+        images/hero-banner.jpg
+        images/posters/movie-01.jpg
+    -->
+    <header class="site-header" id="top">
+      <div class="site-header__inner">
+        <a class="logo" href="#top" aria-label="Netflix home">
+          <span class="logo__text">NETFLIX</span>
+        </a>
+        <nav class="main-nav" aria-label="Primary">
+          <ul class="main-nav__list">
+            <li><a class="main-nav__link main-nav__link--active" href="#top">Home</a></li>
+            <li><a class="main-nav__link" href="#tv-shows">TV Shows</a></li>
+            <li><a class="main-nav__link" href="#movies-section">Movies</a></li>
+            <li><a class="main-nav__link" href="#new-popular">New &amp; Popular</a></li>
+            <li><a class="main-nav__link" href="#my-list">My List</a></li>
+          </ul>
+        </nav>
+        <button type="button" class="profile-btn" aria-label="Account menu">
+          <span class="profile-btn__icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero: full-viewport banner with overlay + CTAs -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__media" role="img" aria-label="Featured movie backdrop"></div>
+        <div class="hero__gradient hero__gradient--top"></div>
+        <div class="hero__gradient hero__gradient--bottom"></div>
+        <div class="hero__content">
+          <p class="hero__eyebrow">Original Film</p>
+          <h1 class="hero__title" id="hero-title">Dune: Part Two</h1>
+          <p class="hero__desc">
+            Paul Atreides unites with Chani and the Fremen while seeking revenge against
+            the conspirators who destroyed his family.
+          </p>
+          <div class="hero__actions">
+            <button type="button" class="btn btn--play">
+              <span class="btn__icon btn__icon--play" aria-hidden="true"></span>
+              Play
+            </button>
+            <button type="button" class="btn btn--ghost">
+              <span class="btn__icon btn__icon--info" aria-hidden="true"></span>
+              More Info
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Movie rows: each section is a horizontally scrollable rail -->
+      <div class="rails">
+        <section class="rail" id="tv-shows" aria-labelledby="rail-trending">
+          <h2 class="rail__title" id="rail-trending">Trending Now</h2>
+          <div class="rail__track" role="list">
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/8UlWLL8RSDeZPaNucEUlk6KR5rm.jpg"
+                alt="Dune: Part Two poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
+                alt="The Dark Knight poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/pIkRyD18d4CAbJgQWvO8EYSQAN9.jpg"
+                alt="Interstellar poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/74hLDKjD5aGYOotO6esUVaeISa2.jpg"
+                alt="Oppenheimer poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"
+                alt="Priscilla poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg"
+                alt="The Shawshank Redemption poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+          </div>
+        </section>
+
+        <section class="rail" id="movies-section" aria-labelledby="rail-popular">
+          <h2 class="rail__title" id="rail-popular">Popular on Netflix</h2>
+          <div class="rail__track" role="list">
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg"
+                alt="Parasite poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cHw6.jpg"
+                alt="Spirited Away poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg"
+                alt="Fight Club poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg"
+                alt="Forrest Gump poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/f89U3ADW1LOk7mm9JWqWfdQvSYu.jpg"
+                alt="Gladiator poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/63xYQj1BwHRlawXXwAYkOkiPFzL.jpg"
+                alt="Inception poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+          </div>
+        </section>
+
+        <section class="rail" id="new-popular" aria-labelledby="rail-action">
+          <h2 class="rail__title" id="rail-action">Action Movies</h2>
+          <div class="rail__track" role="list">
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/i8dOMYd6r9JFJfxp4I6WVhDFQjR.jpg"
+                alt="John Wick: Chapter 4 poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg"
+                alt="Spider-Man: No Way Home poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg"
+                alt="Top Gun: Maverick poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/74xTEgt7R3pG5rnMsu1eT3lJ9v7.jpg"
+                alt="Mad Max: Fury Road poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCYMkv.jpg"
+                alt="Titanic poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/zSqJ1qFq8NXFfi7JeIYMlzyR0dx.jpg"
+                alt="The Matrix poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+          </div>
+        </section>
+
+        <section class="rail" id="my-list" aria-labelledby="rail-top">
+          <h2 class="rail__title" id="rail-top">Top Rated</h2>
+          <div class="rail__track" role="list">
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/bMadFzhjy9T7R8J48QGq1ngWNAK.jpg"
+                alt="The Godfather poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/3bhkrj58V7VBRZBoWeirftdMv6z.jpg"
+                alt="The Godfather Part II poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg"
+                alt="12 Angry Men poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/b42RRiRH3ZB8e6F9vQKaGKRStJn.jpg"
+                alt="Schindler's List poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/pIkRyD18d4CAbJgQWvO8EYSQAN9.jpg"
+                alt="Interstellar poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+            <article class="card" role="listitem">
+              <img
+                class="card__img"
+                src="https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg"
+                alt="Whiplash poster"
+                width="500"
+                height="750"
+                loading="lazy"
+              />
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p class="site-footer__note">UI clone for learning — not affiliated with Netflix.</p>
+    </footer>
+  </body>
+</html>
